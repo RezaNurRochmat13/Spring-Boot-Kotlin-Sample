@@ -1,0 +1,11 @@
+services:
+  account-management-app:
+    container_name: spring-boot-kotlin-test
+    image: 896633740635.dkr.ecr.ap-southeast-1.amazonaws.com/account-management-be:latest
+    ports:
+      - 8080:8080
+    networks:
+      - spring-cloud-network
+networks:
+  spring-cloud-network:
+    driver: bridge
