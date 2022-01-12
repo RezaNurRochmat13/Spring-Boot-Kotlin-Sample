@@ -8,7 +8,7 @@ import javax.persistence.*
 data class MataPelajaran(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id") val id: Long,
-    @Column(name = "name") @JsonProperty("nama_mata_pelajaran") val namaMataPelajaran: String,
-    @Column(name = "description") @JsonProperty("deskripsi_mata_pelajaran") val deskripsiMataPelajaran: String
+    @Column(name = "id") val id: Long?,
+    @Column(name = "name") @JsonProperty("nama_mata_pelajaran") var namaMataPelajaran: String,
+    @Column(name = "description") @JsonProperty("deskripsi_mata_pelajaran") var deskripsiMataPelajaran: String
 )
